@@ -3,5 +3,6 @@
 var gulp = require('gulp')
     , imagemin = require('gulp-imagemin');
 
-gulp.src('src/img');
-gulp.dest('src/img');
+gulp.src('src/img')
+    .pipe(imagemin())
+    .pipe(gulp.dest('src/img'));
