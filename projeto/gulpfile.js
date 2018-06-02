@@ -5,7 +5,7 @@ var gulp = require('gulp')
 
 // nova tarefa
 gulp.task('copy', function() {
-    gulp.src('src')
+    gulp.src('src/**/*')
         .pipe(gulp.dest('dist'));
 });
 
