@@ -6,6 +6,10 @@ var gulp = require('gulp')
     , concat = require('gulp-concat')
     , htmlReplace = require('gulp-html-replace');
 
+gulp.task('default', ['copy'], function() {
+    // aqui será executada a tarefa default
+});
+
 // copy: copia arquivos e diretórios do diretório src para o diretório dist
 //   A task clean é uma dependência da tarefa copy
 gulp.task('copy', ['clean', ], function() {
