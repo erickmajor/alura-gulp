@@ -25,7 +25,7 @@ gulp.task('clean', function() {
 
 // build-img: realiza a minificação dos arquivos que encontram-se no diretório 
 //    dist/img
-gulp.task('build-img', ['copy', ], function() {
+gulp.task('build-img', function() {
     gulp.src('dist/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
