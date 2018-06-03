@@ -32,9 +32,13 @@ gulp.task('build-img', function() {
 });
 
 gulp.task('build-js', function() {
-    gulp.src('dist/js/**/*.js')
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist/js'));
+    gulp.src([
+        'dist/js/jquery.js',
+        'dist/js/home.js',
+        'dist/js/ativa-filtro.js',
+    ])
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('build-html', function() {
