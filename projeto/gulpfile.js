@@ -28,5 +28,6 @@ gulp.task('build-img', ['copy', ], function() {
 
 gulp.task('build-js', function() {
     gulp.src('dist/js/**/*.js')
+        .pipe(concat('all.js'))
         .pipe(gulp.dest('dist/js'));
 });
