@@ -25,3 +25,7 @@ gulp.task('build-img', ['copy', ], function() {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 });
+
+gulp.task('build-js', function() {
+    // nossa tarefa que nada faz ainda
+});
