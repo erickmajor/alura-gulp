@@ -34,5 +34,6 @@ gulp.task('build-js', function() {
 });
 
 gulp.task('build-html', function() {
-    // sem ação alguma, por enquanto
+    gulp.src('dist/**/*.html')
+        .pipe(gulp.dest('dist/'));
 });
