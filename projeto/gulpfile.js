@@ -13,7 +13,7 @@ gulp.task('copy', ['clean'], function() {
 
 // clean: remove todos os arquivos e diretórios do diretório dist
 gulp.task('clean', function() {
-    gulp.src('dist')
+    return gulp.src('dist')
         .pipe(clean());
 });
 
