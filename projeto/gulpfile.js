@@ -7,7 +7,7 @@ var gulp = require('gulp')
     , htmlReplace = require('gulp-html-replace');
 
 gulp.task('default', ['copy'], function() {
-    // aqui será executada a tarefa default
+    gulp.start('build-img', 'build-html', 'build-js');
 });
 
 // copy: copia arquivos e diretórios do diretório src para o diretório dist
