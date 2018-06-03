@@ -35,5 +35,8 @@ gulp.task('build-js', function() {
 
 gulp.task('build-html', function() {
     gulp.src('dist/**/*.html')
+        .pipe(htmlReplace({
+            'js': 'js/all.js'
+        }))
         .pipe(gulp.dest('dist/'));
 });
