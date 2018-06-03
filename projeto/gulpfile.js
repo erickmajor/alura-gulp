@@ -32,3 +32,7 @@ gulp.task('build-js', function() {
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('build-html', function() {
+    // sem ação alguma, por enquanto
+});
