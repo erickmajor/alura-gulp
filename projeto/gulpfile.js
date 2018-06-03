@@ -5,7 +5,8 @@ var gulp = require('gulp')
     , clean = require('gulp-clean');
 
 // copy: copia arquivos e diretórios do diretório src para o diretório dist
-gulp.task('copy', function() {
+//   A task clean é uma dependência da tarefa copy
+gulp.task('copy', ['clean'], function() {
     gulp.src('src/**/*')
         .pipe(gulp.dest('dist'));
 });
