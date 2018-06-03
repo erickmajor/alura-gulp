@@ -2,7 +2,8 @@
 
 var gulp = require('gulp')
     , imagemin = require('gulp-imagemin')
-    , clean = require('gulp-clean');
+    , clean = require('gulp-clean')
+    , concat = require('gulp-concat');
 
 // copy: copia arquivos e diretórios do diretório src para o diretório dist
 //   A task clean é uma dependência da tarefa copy
