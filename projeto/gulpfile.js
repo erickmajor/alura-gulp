@@ -32,3 +32,12 @@ gulp.task('build-img', function() {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 });
+
+gulp.task('usemin', function() {
+  return 
+  gulp.src('dist/**/*.html')
+      .pipe(usemin({
+        js: [uglify, ]
+      }))
+      .pipe(gulp.dest('dist'));
+});
