@@ -9,7 +9,7 @@ var gulp = require('gulp')
     , usemin = require('gulp-usemin');
 
 gulp.task('default', ['copy'], function() {
-    gulp.start('build-img', 'build-html', 'build-js');
+    gulp.start('build-img', 'usemin');
 });
 
 // copy: copia arquivos e diretórios do diretório src para o diretório dist
