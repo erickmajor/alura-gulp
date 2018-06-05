@@ -9,7 +9,7 @@ var gulp = require('gulp')
     , usemin = require('gulp-usemin')
     , cssmin = require('gulp-cssmin');
 
-gulp.task('default', ['copy'], function() {
+gulp.task('default', ['copy', ], function() {
     gulp.start('build-img', 'usemin');
 });
 
@@ -35,11 +35,10 @@ gulp.task('build-img', function() {
 });
 
 gulp.task('usemin', function() {
-  return 
-  gulp.src('dist/**/*.html')
+  return gulp.src('dist/**/*.html')
       .pipe(usemin({
-        js: [uglify, ],
-        css: [cssmin, ]
+        js: [uglify],
+        css: [cssmin]
       }))
       .pipe(gulp.dest('dist'));
 });
