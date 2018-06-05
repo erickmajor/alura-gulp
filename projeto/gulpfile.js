@@ -6,7 +6,8 @@ var gulp = require('gulp')
     , concat = require('gulp-concat')
     , htmlReplace = require('gulp-html-replace')
     , uglify = require('gulp-uglify')
-    , usemin = require('gulp-usemin');
+    , usemin = require('gulp-usemin')
+    , cssmin = require('gulp-cssmin');
 
 gulp.task('default', ['copy'], function() {
     gulp.start('build-img', 'usemin');
