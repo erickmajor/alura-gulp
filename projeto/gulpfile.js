@@ -32,22 +32,3 @@ gulp.task('build-img', function() {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 });
-
-gulp.task('build-js', function() {
-    gulp.src([
-        'dist/js/jquery.js',
-        'dist/js/home.js',
-        'dist/js/ativa-filtro.js',
-    ])
-    .pipe(concat('all.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
-});
-
-gulp.task('build-html', function() {
-    gulp.src('dist/**/*.html')
-        .pipe(htmlReplace({
-            'js': 'js/all.js'
-        }))
-        .pipe(gulp.dest('dist/'));
-});
