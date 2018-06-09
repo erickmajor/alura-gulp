@@ -50,4 +50,6 @@ gulp.task('server', function() {
             baseDir: 'src'
         }
     });
+    
+    gulp.watch('src/**/*').on('change', browserSync.reload);
 });
