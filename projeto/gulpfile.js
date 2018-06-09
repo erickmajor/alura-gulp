@@ -8,7 +8,8 @@ var gulp = require('gulp')
     , uglify = require('gulp-uglify')
     , usemin = require('gulp-usemin')
     , cssmin = require('gulp-cssmin')
-    , browserSync = require('browser-sync');
+    , browserSync = require('browser-sync')
+    , jshint = require('gulp-jshint');
 
 gulp.task('default', ['copy', ], function() {
     gulp.start('build-img', 'usemin');
