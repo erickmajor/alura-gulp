@@ -10,7 +10,8 @@ var gulp = require('gulp')
     , cssmin = require('gulp-cssmin')
     , browserSync = require('browser-sync')
     , jshint = require('gulp-jshint')
-    , jshintStylish = require('jshint-stylish');
+    , jshintStylish = require('jshint-stylish')
+    , csslint = require('gulp-csslint');
 
 gulp.task('default', ['copy', ], function() {
     gulp.start('build-img', 'usemin');
