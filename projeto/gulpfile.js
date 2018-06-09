@@ -59,6 +59,6 @@ gulp.task('server', function() {
         console.log("Linting " + event.path);
         gulp.src(event.path)
             .pipe(jshint())
-            .pipe(jshint.reporter());
+            .pipe(jshint.reporter(jshintStylish));
     });
 });
