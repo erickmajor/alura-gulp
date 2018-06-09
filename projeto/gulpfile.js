@@ -36,10 +36,18 @@ gulp.task('build-img', function() {
 });
 
 gulp.task('usemin', function() {
-  return gulp.src('dist/**/*.html')
-      .pipe(usemin({
-        js: [uglify],
-        css: [cssmin]
-      }))
-      .pipe(gulp.dest('dist'));
+    return gulp.src('dist/**/*.html')
+        .pipe(usemin({
+            js: [uglify],
+            css: [cssmin]
+        }))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('server', function() {
+    browserSync.init({
+        server: {
+            baseDir: 'src'
+        }
+    });
 });
