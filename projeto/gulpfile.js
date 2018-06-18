@@ -71,4 +71,10 @@ gulp.task('server', function() {
             .pipe(csslint())
             .pipe(csslint.reporter());
     });
+
+    gulp.watch('src/less/**/*.less').on('change', function(event) {
+        gulp.src(event.path)
+             .pipe(less())
+             .pipe(gulp.dest('src/css'));
+     });
 });
