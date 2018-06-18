@@ -73,8 +73,11 @@ gulp.task('server', function() {
     });
 
     gulp.watch('src/less/**/*.less').on('change', function(event) {
-        gulp.src(event.path)
-             .pipe(less())
-             .pipe(gulp.dest('src/css'));
+        var stream = gulp.src(event.path)
+            .pipe(less().on('error', function(erro) {
+                console.log('LESS, erro compilação: ' + erro.filename);
+                console.log(erro.message);
+            }))
+            .pipe(gulp.dest('src/css'));
      });
 });
