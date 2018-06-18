@@ -43,7 +43,7 @@ gulp.task('usemin', function() {
     return gulp.src('dist/**/*.html')
         .pipe(usemin({
             js: [uglify],
-            css: [autoprefixer, cssmin]
+            css: [autoprefixer]
         }))
         .pipe(gulp.dest('dist'));
 });
