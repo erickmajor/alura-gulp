@@ -12,7 +12,8 @@ var gulp = require('gulp')
     , jshint = require('gulp-jshint')
     , jshintStylish = require('jshint-stylish')
     , csslint = require('gulp-csslint')
-    , autoprefixer = require('gulp-autoprefixer');
+    , autoprefixer = require('gulp-autoprefixer')
+    , less = require('gulp-less');
 
 gulp.task('default', ['copy', ], function() {
     gulp.start('build-img', 'usemin');
